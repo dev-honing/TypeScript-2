@@ -12,3 +12,8 @@ interface Props {
 
 // 인터페이스의 사전적인 정의는 '약속'이다.
 // TypeScript의 interface는 약속이다.
+
+// createComponent() 함수 정의
+function createComponent(element: string, props: Props, children?: string[]): string {
+  let tagParts = [`<${element}`];
+} {}
