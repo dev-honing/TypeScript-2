@@ -16,4 +16,11 @@ interface Props {
 // createComponent() 함수 정의
 function createComponent(element: string, props: Props, children?: string[]): string {
   let tagParts = [`<${element}`];
-} {}
+
+  // CSS 스타일 객체를 문자열로 변환하는 함수
+  const styleToString = (style: Partial<CSSStyleDeclaration>): string => {
+    
+  };
+
+  
+}
