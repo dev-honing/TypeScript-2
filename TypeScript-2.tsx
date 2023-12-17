@@ -19,7 +19,12 @@ function createComponent(element: string, props: Props, children?: string[]): st
 
   // CSS 스타일 객체를 문자열로 변환하는 함수
   const styleToString = (style: Partial<CSSStyleDeclaration>): string => {
-    
+    // 스타일 객체의 키-값 쌍을 배열로 변환하고, 각 쌍을 'key: value;'의 형태로 반환
+    const entries = Object.entries(style);
+    const objectValues = entries.map(([key, value]) => `${key}: ${value};`);
+    // 변환된 문자열들을 합쳐서 최종 스타일 문자열로 반환
+    const result = objectValues.join('');
+    return result;
   };
 
   
